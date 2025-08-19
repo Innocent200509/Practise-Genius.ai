@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Results</h2>
+<p>{{ feedback }}</p>
+<div class="actions">
+    <a href="{{ url_for('index') }}"><button>🏠 Home</button></a>
+    <form action="{{ url_for('start_practice') }}" method="POST" style="display: inline;">
+        <button type="submit">🔄 Next Question</button>
+    </form>
+</div>
+{% endblock %}

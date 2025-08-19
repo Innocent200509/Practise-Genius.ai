@@ -1,0 +1,20 @@
+# Ignore everything by default (this is a strong rule)
+*
+
+# Now, whitelist the specific files and folders we NEED for GitHub Pages
+!.gitignore
+!index.html # <- WHITELIST the new root index.html
+!static/
+!static/style.css
+!templates/
+!templates/*.html
+
+# But make sure to still ignore Python and other sensitive files
+app.py
+requirements.txt
+.env
+venv/
+__pycache__/
+*.pyc
+.DS_Store
+.vscode/
