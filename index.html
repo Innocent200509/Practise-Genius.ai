@@ -1,15 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=https://your-flask-app-url.herokuapp.com">
-    <title>PracticeGenius.ai - Redirecting...</title>
-    <script>
-        // Fallback in case the meta refresh doesn't work
-        window.location.href = "https://your-flask-app-url.herokuapp.com";
-    </script>
-</head>
-<body>
-    <p>If you are not redirected automatically, please <a href="https://your-flask-app-url.herokuapp.com">click here</a>.</p>
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Stop Getting Answers. Start Understanding.</h2>
+<p>Generate practice questions and get instant, AI-powered feedback on your work.</p>
+<form action="{{ url_for('start_practice') }}" method="POST">
+    <button type="submit">Generate a Practice Question</button>
+</form>
+{% endblock %}
